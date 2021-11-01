@@ -16,7 +16,7 @@ class Cal_area{
 	}
 }
 
-public class test {
+public class Class01 {
 	public static void main(String[] args) {
 		Cal_area ar = new Cal_area();
 		ar.a = 10;
