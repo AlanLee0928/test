@@ -1,3 +1,7 @@
+package Class02;
+
+import java.util.*;
+
 class is_prime{
 	int a , b;
 	
@@ -22,8 +26,9 @@ class is_prime{
 
 public class Class02 {
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		is_prime pr = new is_prime();
-		pr.a = 37;
+		pr.a = sc.nextInt();
 		pr.prime();
 	}
 }
