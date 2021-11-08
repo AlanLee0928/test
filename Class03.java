@@ -1,3 +1,5 @@
+package Class03;
+
 class Data{
 	private	String name;
 	private	Test score;
@@ -5,31 +7,33 @@ class Data{
 	class Test{
 		int english , math;
 
-		public Test(int a , int b){
-			english = a;
-			math = b;
+		public Test(int eng , int m){
+			english = eng;
+			math = m;
 		}
 		double avg(){
-			return (english + math) / 2;
+			return (english + (double)math) / 2;
 		}
 	}
-	
-	void Data(String c,int d,int e){
-	    	name = c;
-	    	score = new Test(d , e);
+	void Data(String a,int b,int c){
+	    	name = a;
+	    	score = new Test(b , c);
 	}
 	void show(){
-		System.out.println("學生姓名:" + name);
-		System.out.println("英文成績:" + score.english);
-		System.out.println("數學成績:" + score.math);
-		System.out.println("平均成績:" + score.avg());
+		System.out.print("name:" + name + " ");
+		System.out.print("english:" + score.english + " ");
+		System.out.print("math:" + score.math + " ");
+		System.out.println("avg:" + score.avg());
 	}
 }
 
 public class Class03 {
 	public static void main(String[] args) {
 		Data da = new Data();
+		Data Da = new Data();
 		da.Data("Annie", 85, 92);
+		Da.Data("Brain", 77, 56);
 		da.show();
+		Da.show();
 	}
 }
